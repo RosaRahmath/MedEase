@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3e0ff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2874a6;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.latest-health-tips, .top-health-tips, .trending-now {
+    margin-top: 20px;
+}
+
+.latest-health-tips h2, .top-health-tips h2, .trending-now h2 {
+    color: #2874a6;
+}
+
+.tips {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tip {
+    width: 30%;
+    text-align: center;
+    background-color: #e0e7ff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.tip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tip img.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tip p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.tip a {
+    color: #2874a6;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.tip a:hover {
+    color: #ff6f61;
+}
+
+.top-health-tips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.top-health-tips li {
+    background-color: #e0e7ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.top-health-tips li:hover {
+    background-color: #cce7ff;
+}
+
+.top-health-tips li a {
+    color: #2874a6;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.top-health-tips li a:hover {
+    color: #ff6f61;
+}
+
+.trending-now {
+    text-align: center;
+}
+
+.trending-now .trend {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.trend .heart-health, .trend .weight-loss {
+    width: 48%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.heart-health {
+    background-color: #cce7ff;
+}
+
+.weight-loss {
+    background-color: #ccffed;
+}
+
+.trend h3 {
+    margin-top: 0;
+}
+
+.trend p {
+    font-size: 14px;
+}
+
+.trend a {
+    color: #2874a6;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.trend:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trend a:hover {
+    color: #ff6f61;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2874a6;
+    border-radius: 0 0 10px 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6f61;
+}
