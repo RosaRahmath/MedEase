@@ -117,27 +117,27 @@ td span.icon {
                     <tr>
                         <td><span class="icon"></span>Dr. A</td>
                         <td>Cardiologist</td>
-                        <td><button class="book-btn">Book Now</button></td>
+                        <td><button class="book-btn"><a href="doctor_profile.html">Book Now</a></button></td>
                     </tr>
                     <tr>
                         <td><span class="icon"></span>Dr. B</td>
                         <td>Cardiologist</td>
-                        <td><button class="book-btn">Book Now</button></td>
+                        <td><button class="book-btn"><a href="doctor_profile.html">Book Now</a></button></td>
                     </tr>
                     <tr>
                         <td><span class="icon"></span>Dr. C</td>
                         <td>Cardiologist</td>
-                        <td><button class="book-btn">Book Now</button></td>
+                        <td><button class="book-btn"><a href="doctor_profile.html">Book Now</a></button></td>
                     </tr>
                     <tr>
                         <td><span class="icon"></span>Dr. D</td>
                         <td>Cardiologist</td>
-                        <td><button class="book-btn">Book Now</button></td>
+                        <td><button class="book-btn"><a href="doctor_profile.html">Book Now</a></button></td>
                     </tr>
                     <tr>
                         <td><span class="icon"></span>Dr. X</td>
                         <td>Cardiologist</td>
-                        <td><button class="book-btn">Book Now</button></td>
+                        <td><button class="book-btn"><a href="doctor_profile.html">Book Now</a></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -152,7 +152,7 @@ td span.icon {
 
 document.querySelectorAll('.book-btn').forEach(button => {
     button.addEventListener('click', () => {
-        alert('Booking confirmed for ' + button.closest('tr').querySelector('td').textContent.trim());
+        //alert('Booking confirmed for ' + button.closest('tr').querySelector('td').textContent.trim());
     });
 });
 
