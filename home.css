@@ -13,7 +13,7 @@ body {
 .top-bar {
     background-color: #01A99A;
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 14px;
 }
 
@@ -28,7 +28,6 @@ body {
 .top-bar-left a {
     color: white;
     margin-right: 15px;
-    text-decoration: none;
 }
 
 .top-bar-right span {
@@ -43,7 +42,7 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 80px;
 }
 
 .nav-links {
@@ -87,22 +86,29 @@ body {
 }
 
 /* Hero Section */
-.hero {
-    background-color: white;
-    padding: 60px 0;
-    text-align: center;
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for better text readability */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
 }
 
+/* Adjusted hero text styles */
 .hero h1 {
     color: #005BB5;
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .hero p {
     color: #00A99D;
     font-size: 1.2em;
     margin-bottom: 40px;
+    text-align: left;
 }
 
 .btn {
@@ -116,4 +122,32 @@ body {
 
 .btn:hover {
     background-color: #004897;
+}
+
+.login-btn {
+    padding: 10px 15px;
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 5pt;
+    background-color: #005BB5;
+    color: aliceblue;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Right Image Container */
+.right-image-container {
+    width: 60%; 
+    margin-left: auto; 
+}
+
+.right-image-container img {
+    width: 100%; /* Adjusted to fit the container */
+    border-radius: 10px;
+}
+
+footer {
+    background: #005BB5;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
