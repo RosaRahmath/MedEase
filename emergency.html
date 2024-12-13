@@ -17,14 +17,12 @@
       <div class="service-card">
         <h2>Emergency Contact</h2>
         <p>Call immediately in case of an emergency</p>
-        <img src="" alt="contact-number">
         <p class="contact-number">+1-800-123-4567</p>
         <button class="call-button" onclick="callEmergency()">Call Now</button>
       </div>
       <div class="service-card">
         <h2>Ambulance Services</h2>
         <p>We provide 24/7 ambulance service for urgent medical transport.</p>
-        <img src="" alt="ambulance">
         <p class="contact-number">+1-800-987-6543</p>
         <button class="call-button" onclick="callAmbulance()">Call Ambulance</button>
       </div>
@@ -36,7 +34,12 @@
       </div>
     </div>
 
-    
+    <div class="emergency-alert">
+      <h2>Urgent Alert</h2>
+      <p>If you're facing a critical medical situation, please click below:</p>
+      <button class="alert-button" onclick="alertEmergency()">Send Alert</button>
+    </div>
+  </div>
 
   <script>
     // Call Emergency Phone Function
@@ -57,7 +60,11 @@
       // You can add code to display a map or open Google Maps for the location
     }
 
-    
+    // Send Emergency Alert Function
+    function alertEmergency() {
+      alert('Emergency alert has been sent!');
+      // This could trigger an actual alert or notify medical staff via email/API
+    }
   </script>
 </body>
 </html>

@@ -7,88 +7,84 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+    background: url('images/blur-hospital.jpg') no-repeat center center fixed; /* Set your background image */
+    background-size: cover; /* Ensure the background image covers the whole page */
+    color: #fff;
     padding: 20px;
   }
   
   .emergency-service-container {
     max-width: 1200px;
-    margin: 50px auto;
-    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent black overlay for readability */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 40px;
   }
   
+  /* Emergency Header */
+  .emergency-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: url('images/header-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Emergency Header Title */
   .emergency-header h1 {
     font-size: 2.5rem;
-    color: #d32f2f;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   }
   
+  /* Emergency Header Description */
   .emergency-header p {
     font-size: 1.2rem;
-    color: #555;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   
-  .emergency-details {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  
+  /* Service Cards */
   .service-card {
-    background-color: #f2f2f2;
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    margin-bottom: 30px;
+    background-image: url('images/service-background.jpg'); /* Background for each service card */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
-  .service-card h2 {
-    color: #1976d2;
-    margin-bottom: 10px;
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
   
-  .contact-number {
-    font-size: 1.5rem;
-    color: #d32f2f;
-    margin: 10px 0;
+  /* Service Card Image */
+  .service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
   }
   
-  .call-button,
-  .map-button,
-  .alert-button {
-    background-color: #1976d2;
+  /* Call and Map Buttons */
+  .call-button, .map-button {
+    background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
-    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
   }
   
-  .call-button:hover,
-  .map-button:hover,
-  .alert-button:hover {
-    background-color: #1565c0;
+  .call-button:hover, .map-button:hover {
+    background-color: #2980b9;
   }
-  
-  .emergency-alert {
-    margin-top: 50px;
-    background-color: #3b76ff;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  
-  
-  .emergency-alert p {
-    font-size: 1.2rem;
-  }
-  
   
