@@ -72,4 +72,27 @@
     margin-top: 10px;
     color: #1c5b85;
   }
+
+  /* Main Menu */
+.menu-bar {
+  background-color: #005BB5;
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.menu-links li a:hover {
+  background-color: #004897;
+}
+
+
   
