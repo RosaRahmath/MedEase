@@ -37,12 +37,12 @@ body {
 /* Logo and Main Navigation */
 .main-nav {
     background-color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 80px;
+    height: 90px;
 }
 
 .nav-links {

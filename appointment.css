@@ -1,67 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e8f0fe;
+/* Main Menu */
+.menu-bar {
+    background-color: #005BB5;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    background-color: #2874a6;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+.container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-nav ul li a {
+.menu-logo {
     color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
+.menu-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
+.menu-links li {
+    position: relative;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-button {
-    padding: 5px 10px;
-    border: none;
+.menu-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-button.join {
-    background-color: #4caf50;
-    color: white;
+.menu-links li a:hover {
+    background-color: #004897;
+    color: #e0e0e0;
 }
 
-button.cancel {
-    background-color: #f44336;
-    color: white;
+/* Dropdown Menu Styling */
+.menu-links li:hover .dropdown {
+    display: block;
 }
 
-button:hover {
-    opacity: 0.8;
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #005BB5;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
 }
