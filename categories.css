@@ -15,10 +15,7 @@
     padding: 20px;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
+   
   
   header h1 {
     font-size: 2.5rem;
@@ -73,9 +70,22 @@
     color: #1c5b85;
   }
 
-  /* Main Menu */
-.menu-bar {
-  background-color: #005BB5;
+  
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d52b9;
+  /* Primary color */
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .menu-links {
