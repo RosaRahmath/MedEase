@@ -9,9 +9,42 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column; /* Stack content vertically */
-    justify-content: center;
-    align-items: center;
+  
 }
+
+ /* Navigation Bar */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#005BB5;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    color: #1abc9c;
+  }
 
 .container {
     width: 80%;
