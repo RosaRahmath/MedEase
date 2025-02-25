@@ -12,25 +12,25 @@
             <div class="container">
                 <a href="home.html" class="menu-logo">MedEase</a>
                 <ul class="menu-links">
-                    <li><a href="home.html">Home</a></li>
-                    <li>
-                        <a href="#">About Us</a>
-                        <ul class="dropdown">
-                            <li><a href="our-team.html">Our Team</a></li>
-                            <li><a href="mission.html">Mission</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="categories.html">Medical Specialties</a></li>
-                    <li><a href="appointment.html">Appointments</a></li>
-                    <li><a href="health.html">Health Care Tips</a></li>
-                    <li><a href="emergency.html">Emergency</a></li>
-                    <li><a href="contactUs.html">Contact Us</a></li>
+                  
+                    <div class="navbar">
+                    
+                        <div class="profile-container">
+                            <img src="images/Dr_profile.jpg" alt="Doctor Profile" class="profile-icon">
+                            <span class="profile-name">Dr. Jhon</span>
+
+                            <a href="#" class="logout">Log out</a>
+                        </div>
+                    </div>
+                    
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <h2>Your Appointments</h2>
+        
+    <div class="container_table">
         <table id="appointmentsTable">
             <thead>
                 <tr>
@@ -46,6 +46,7 @@
                 <!-- Appointment rows will be dynamically populated -->
             </tbody>
         </table>
+    </div>
     </main>
     <script src="script.js"></script>
 </body>

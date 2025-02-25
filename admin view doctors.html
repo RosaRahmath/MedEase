@@ -3,119 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Management</title>
-    <style>
-        /* common */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+    <title>Admin</title>
+    <style>/* Main Menu */
+        .menu-bar {
+            background-color: #005BB5;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(247, 245, 245, 0.1);
         }
-
-        body {
-            background-color: #a0c3ff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* Header  */
-        .header {
+        
+        .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 90%;
-            max-width: 1100px;
-            margin-bottom: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
-        .header h1 {
-            font-size: 28px;
-            color: #2c5aa0;
-        }
-
-        .header button {
-            background-color: #4d8af0;
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/blur-hospital.jpg') no-repeat center center fixed;
+            background-size: cover;
+           
+          } 
+        
+        .menu-logo {
             color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 14px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+        .menu-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu-links li {
+            position: relative;
+            color: aliceblue;
+        }
+        
+        .menu-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 5px;
-            cursor: pointer;
         }
-
-        .header button:hover {
-            background-color: #2c5aa0;
+        
+        .menu-links li a:hover {
+            background-color: #004897;
+            color: #e0e0e0;
         }
-
-        /* Table Container */
-        .container {
-            width: 90%;
+        
+        /* Dropdown Menu Styling */
+        .menu-links li:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #005BB5;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dropdown li a {
+            display: block;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+         /* Table */
+        
+          /* Table Container */
+          .container_table {
+            width: 100%;
             max-width: 1100px;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        /* Table */
-        table {
+        
+         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
-
+        
         th, td {
             border: 1px solid #ccc;
             text-align: center;
             padding: 8px;
             font-size: 14px;
         }
-
+        
         th {
             background-color: #4d8af0;
             color: white;
         }
-
+        
         td {
             background-color: #f8f8f8;
         }
-
-     
-        .pagination {
-            margin-top: 15px;
+        
+        
+        .profile-icon {
+            width: 40px;  /* Adjust size */
+            height: 40px;
+            border-radius: 50%; /* Makes it circular */
+            object-fit: cover;
+            margin-right: 10px; /* Add some spacing */
+            vertical-align: middle;
+        }
+        
+        .profile {
             display: flex;
-            justify-content: flex-end;
             align-items: center;
-            font-size: 14px;
+            gap: 10px;
         }
-
-        .pagination span {
-            margin-right: 10px;
-            color: #4d8af0;
+        
+        .profile-name{
+            color: #e0e0e0;
+        }
+        
+        .logout{
+            color: aliceblue;
+        }
+        .button {
+            background-color: #2697a4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        .pagination span:hover {
-            text-decoration: underline;
+        .button:hover {
+            background-color:#4d8af0;
+            /* Darker blue on hover */
         }
-    </style>
+        </style>
 </head>
 <body>
+    <header>
+        <nav class="menu-bar">
+            <div class="container">
+                <a href="home.html" class="menu-logo">MedEase</a>
+                <ul class="menu-links">
+                    <div class="navbar">
+                    
+                        <div class="profile-container">
+                            <img src="images/Dr_profile.jpg" alt="Doctor Profile" class="profile-icon">
+                            <span class="profile-name">Admin</span>
+
+                            <a href="#" class="logout">Log out</a>
+                        </div>
+                    </div>
+                    
+                </ul>
+            </div>
+        </nav>
+       
+    </header>
+    <main>
+        <br>
+        <a href="admin.html"> <button class="button">Go to Main page</button></a>
+        <h2>Doctors Table</h2>
+        
+    <div class="container_table">
+        <div class="header">
+            <button>+ ADD NEW</button>
+        </div>
     
-
-    <div class="header">
-        <h1>MedEase</h1>
-        <button>+ ADD NEW</button>
-    </div>
-
-   
-    <div class="container">
-        <!-- Table -->
-        <table>
+        <table id="appointmentsTable">
             <thead>
                 <tr>
                     <th>Doctor ID</th>
@@ -128,64 +202,31 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>D01</td>
-                    <td>Dr. N</td>
-                    <td>Dermatology</td>
-                    <td>9/8/2020</td>
-                    <td>10 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D02</td>
-                    <td>Dr. J</td>
-                    <td>Neurology</td>
-                    <td>5/1/2015</td>
-                    <td>5 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D03</td>
-                    <td>Dr. M</td>
-                    <td>Cardiology</td>
-                    <td>9/10/2012</td>
-                    <td>12 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D04</td>
-                    <td>Dr. T</td>
-                    <td>Pediatrics</td>
-                    <td>9/8/2014</td>
-                    <td>15 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D05</td>
-                    <td>Dr. V</td>
-                    <td>Ophthalmology</td>
-                    <td>9/8/2020</td>
-                    <td>12 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D06</td>
-                    <td>Dr. Y</td>
-                    <td>Cardiology</td>
-                    <td>5/1/2015</td>
-                    <td>7 years</td>
-                    <td>0XX-XXX-XXX</td>
-                    <td>Y@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>D07</td>
-                    <td>Dr. A</td>
-                    <td>Pediatrics</td>
-                    <td>9/10/2012</td>
-                    <td>9 years</td>
-                    <td>0XX-XXX-XX
+                <!-- Appointment rows will be dynamically populated -->
+            </tbody>
+        </table>
+    </div>
+    </main>
+   
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("https://api.example.com/appointments") // Replace with actual API endpoint
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById("appointment-table-body");
+                tableBody.innerHTML = ""; // Clear existing content
+                data.forEach(appointment => {
+                    const row = `<tr>
+                        <td>${appointment.patient_name}</td>
+                        <td>${appointment.date}</td>
+                        <td>${appointment.time}</td>
+                        <td class="${appointment.status.toLowerCase()}">${appointment.status}</td>
+                    </tr>`;
+                    tableBody.innerHTML += row;
+                });
+            })
+            .catch(error => console.error("Error fetching appointments:", error));
+    });
+</script>
+</html>
