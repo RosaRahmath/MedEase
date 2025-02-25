@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedEase - Doctor Booking</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/blur-hospital.jpg');  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color:  #dcdcdc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    border: 20px #00897b solid;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #5f9ea0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background-image: url('doctor.png');  
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.doctor-info {
+    text-align: center;
+}
+
+.doctor-info h2 {
+    margin: 0;
+}
+
+.booking-section {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color:  #5f9ea0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-btn {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #00897b;
+}
+
+.back-btn-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    background-color: #5f9ea0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #4682b4;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+            <div class="doctor-info">
+                <h2>Dr.Chandran</h2>
+                <p>Consultant General and Interventional Cardiologist</p>
+                <p>Over 10 years experience</p>
+            </div>
+        </div>
+
+        <div class="booking-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Next Available Number</th>
+                        <th></th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>04-July-2024</td>
+                        <td>Thursday 8:00 pm</td>
+                        <td>1</td>
+                        <td><button class="book-btn"> <a href="bookingform.html"> Book Now </a></button></td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>14-July-2024</td>
+                        <td>Thursday 8:00 pm</td>
+                        <td>0</td>
+                        <td><button class="book-btn"> <a href="bookingform.html"> Book Now </a></button></td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>24-July-2024</td>
+                        <td>Thursday 8:00 pm</td>
+                        <td>2</td>
+                        <td><button class="book-btn"> <a href="bookingform.html"> Book Now </a></button></td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>30-July-2024</td>
+                        <td>Thursday 8:00 pm</td>
+                        <td>1</td>
+                        <td><button class="book-btn"> <a href="bookingform.html"> Book Now </a></button></td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="back-btn-section">
+            <button class="back-btn"><a href="speacialist.html">Go Back</a></button>
+        </div>
+    </div>
+
+    <script >
+        // Here you can handle booking logic and "Go Back" button functionality
+
+document.querySelectorAll('.book-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Booking confirmed!');
+    });
+});
+
+document.querySelector('.back-btn').addEventListener('click', () => {
+    alert('Going back to the previous page.');
+    // You can add your navigation logic here
+});
+
+    </script>
+</body>
+</html>
