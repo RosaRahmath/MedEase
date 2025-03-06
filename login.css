@@ -93,3 +93,9 @@ body {
     opacity: 0.5; /* Adjust opacity */
     z-index: -1; /* Keep the image behind the content */
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
