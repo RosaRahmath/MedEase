@@ -41,19 +41,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }elseif ($role === 'admin') {
        
             // Check login details in the admin table
-            $stmt = $conn->prepare("SELECT id, name, password FROM admin WHERE name = :name");
+            $stmt = $conn->prepare("SELECT id, name, password FROM admin WHERE name= :name");
             $stmt->bindParam(':name', $email); // Since admin logs in with 'name', not email
             $stmt->execute();
 
             $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
            // Directly compare passwords (since it's stored in plain text)
-           if ($admin && $password === $admin['password']) {
+           if ($admin && password_verify($password, $admin['password'])) {
             $_SESSION['user_id'] = $admin['id'];
             $_SESSION['role'] = 'admin';
             $_SESSION['fullname'] = $admin['name']; // Store admin name
 
-                header("Location: admin view doctors.html");
+                header("Location: admin dashboard.html");
                 exit;
             } else {
                 $errorMessage = "Invalid admin name or password.";
@@ -61,19 +61,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }elseif ($role === 'doctor') {
        
             // Check login details in the  doctor table
-            $stmt = $conn->prepare("SELECT id, name, password FROM  doctors WHERE name = :name");
-            $stmt->bindParam(':name', $email); // Since  doctors logs in with 'name', not email
+            $stmt = $conn->prepare("SELECT id, name, password FROM  doctors WHERE email = :email");
+            $stmt->bindParam(':email', $email); // Since  doctors logs in with   email
             $stmt->execute();
 
             $doctors = $stmt->fetch(PDO::FETCH_ASSOC);
 
            // Directly compare passwords (since it's stored in plain text)
-           if ($doctors && $password === $doctors['password']) {
+           if ($doctors && password_verify($password, $doctors['password'])) {
             $_SESSION['user_id'] = $doctors['id'];
             $_SESSION['role'] = 'doctors';
             $_SESSION['fullname'] = $doctors['name']; // Store admin name
 
-                header("Location: admin view doctors.html");
+                header("Location:  doctor dashboard.html");
                 exit;
             } else {
                 $errorMessage = "Invalid admin name or password.";

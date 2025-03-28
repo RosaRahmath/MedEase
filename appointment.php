@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'db.php'; 
- 
+
 // Check if the user is logged in (user_id should be stored in the session)
 if (!isset($_SESSION['user_id'])) {
     // Redirect to login page if not logged in
@@ -35,7 +35,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Appointments</title>
-    <link rel="stylesheet" href="appointments.css"> <!-- Your CSS file -->
+    <link rel="stylesheet" href="appointment.css">  
 </head>
 <body>
     <div class="container">
@@ -50,10 +50,12 @@ try {
                     <th>Queue Number</th>
                     <th>Payment Method</th>
                     <th>Status</th>
+                    <th> Join</th>
+                    <th> Cancel </th>
                 </tr>
             </thead>
             <tbody>
-            <?php
+                <?php
                     // Sample array of doctors for demonstration
                     $doctors = [
                         ['id' => 1, 'name' => 'Dr. John Doe', 'specialization' => 'Cardiologist'],
@@ -82,13 +84,18 @@ try {
                             <td><?= htmlspecialchars($appointment['queue_number']) ?></td>
                             <td><?= htmlspecialchars($appointment['payment_method']) ?></td>
                             <td><?= htmlspecialchars($appointment['status']) ?></td>
+                            <td><button type="submit" class="join-btn">Join</button> </td>
+                            <td><button type="submit" class="cancel-btn">Cancel</button> </td>
                         </tr>
                     <?php endforeach; ?>
-                <?php else: ?>
+                <?php else: ?> <br><br>
                     <tr>
-                        <td colspan="6">No appointments found.</td>
+                        <td colspan="7">No appointments found.</td>
                     </tr>
                 <?php endif; ?>
+                <div class="back-btn-section">
+            <button class="back-btn"><a href="home.html">HOME</a></button>
+                 </div>
             </tbody>
         </table>
     </div>

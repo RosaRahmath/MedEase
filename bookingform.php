@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'db.php';   // Include database connection
+include 'db.php';   
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // Redirect to login page if not logged in
+    header("Location: login.php"); 
     exit;
 }
 
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedEase - Appointment Form</title>
-    <link rel="stylesheet" href="bookingform.css"> <!-- Retaining your CSS -->
+    <link rel="stylesheet" href="bookingform.css"> 
 </head>
 <body>
     <div class="container">

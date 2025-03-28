@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedEase - Choose a Cardiac Specialist</title>
-    <link rel="stylesheet" href="speacialist.css"> <!-- Retaining your CSS -->
+    <link rel="stylesheet" href="speacialist.css">  
 </head>
 <body>
     <div class="container">
@@ -19,11 +19,11 @@
                     <?php
                     // Sample array of doctors for demonstration
                     $doctors = [
-                        ['id' => 1, 'name' => 'Dr. A', 'specialization' => 'Cardiologist'],
-                        ['id' => 2, 'name' => 'Dr. B', 'specialization' => 'Cardiologist'],
-                        ['id' => 3, 'name' => 'Dr. C', 'specialization' => 'Cardiologist'],
-                        ['id' => 4, 'name' => 'Dr. D', 'specialization' => 'Cardiologist'],
-                        ['id' => 5, 'name' => 'Dr. X', 'specialization' => 'Cardiologist'],
+                        ['id' => 1, 'name' => 'Dr. John Doe', 'specialization' => 'Cardiologist'],
+                        ['id' => 2, 'name' => 'Dr. Jane Smith', 'specialization' => 'Cardiologist'],
+                        ['id' => 3, 'name' => 'Dr. Robert Brown', 'specialization' => 'Cardiologist'],
+                        ['id' => 4, 'name' => 'Dr. Silva', 'specialization' => 'Cardiologist'],
+                        ['id' => 5, 'name' => 'Dr. Perera', 'specialization' => 'Cardiologist'],
                     ];
 
                     foreach ($doctors as $doctor) {

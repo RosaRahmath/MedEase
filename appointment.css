@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -82,4 +84,48 @@ td:last-child {
         text-transform: uppercase;
         color: #007BFF;
     }
+}
+
+.join-btn, .cancel-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+.join-btn {
+    background-color: #51d06e;
+    color: white;
+}
+.cancel-btn {
+    background-color: #ea5968;
+    color: white;
+}
+.join-btn:hover {
+    background-color: #118b2c;
+}
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+
+.back-btn-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    background-color: #5f9ea0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #4682b4;
 }
